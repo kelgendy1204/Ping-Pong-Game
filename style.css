@@ -1,0 +1,58 @@
+:root {
+    --game-width: 720px;
+    --game-height: 720px;
+    --game-border: 3px;
+    --player-width: 150px;
+    --ball-diameter: 30px;
+    --shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+.game-score {
+    margin-top: 1rem;
+    width: var(--game-width);
+}
+
+.game-container {
+    position: relative;
+    width: var(--game-width);
+    height: var(--game-height);
+    border: var(--game-border) solid var(--gray-dark);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.player {
+    height: 20px;
+    width: var(--player-width);
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    box-shadow: var(--shadow);
+    transform: translateX(calc((var(--game-width) - (var(--game-border) * 2)) / 2 - (var(--player-width) / 2)));
+}
+
+.player1 {
+    top: 50px;
+    background-color: var(--blue);
+}
+
+.player2 {
+    bottom: 50px;
+    background-color: var(--orange);
+}
+
+.ball {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--ball-diameter);
+    height: var(--ball-diameter);
+    margin: 0;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
+    transform: translateX(calc((var(--game-width) - (var(--game-border) * 2)) / 2 - (var(--ball-diameter) / 2)))
+        translateY(calc((var(--game-height) - (var(--game-border) * 2)) / 2 - (var(--ball-diameter) / 2)));
+}
+
