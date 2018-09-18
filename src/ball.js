@@ -9,8 +9,8 @@ export default class Ball {
 
     setInitialPosition() {
         const position = {
-            top  : (((gameHeight - gameBorder) * 2) / 2) - (this.diameter / 2),
-            left : (((gameWidth - gameBorder) * 2) / 2) - (this.diameter / 2)
+            top  : ((gameHeight - (gameBorder * 2)) / 2) - (this.diameter / 2),
+            left : ((gameWidth - (gameBorder * 2)) / 2) - (this.diameter / 2)
         };
         this.setPosition(position);
     }
@@ -22,10 +22,12 @@ export default class Ball {
         if(!isNaN(top)) {
             this.top = top;
         }
-        this.renderPosition();
+        if(!isNaN(left) || !isNaN(top)) {
+            this.renderPosition();
+        }
     }
 
     renderPosition() {
-        console.log('rendered');
+        this.element.style.transform = `translate(${this.left}px, ${this.top}px)`;
     }
 };

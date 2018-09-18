@@ -27,8 +27,8 @@
     border-radius: 5px;
     position: absolute;
     left: 0;
+    transform-origin: center center;
     box-shadow: var(--shadow);
-    /* transform: translateX(calc((var(--game-width) - (var(--game-border) * 2)) / 2 - (var(--player-width) / 2))); */
 }
 
 .player1 {
@@ -51,8 +51,7 @@
     margin: 0;
     border-radius: 50%;
     box-shadow: var(--shadow);
+    transform-origin: center center;
     background: radial-gradient(circle at 50% 40%, #fcfcfc, #efeff1 66%, #9b5050 100%);
-    /* transform: translateX(calc((var(--game-width) - (var(--game-border) * 2)) / 2 - (var(--ball-diameter) / 2))) */
-        /* translateY(calc((var(--game-height) - (var(--game-border) * 2)) / 2 - (var(--ball-diameter) / 2))); */
 }
 
