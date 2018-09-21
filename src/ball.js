@@ -7,7 +7,7 @@ export default class Ball {
         this.XDirection = 1;
         this.YDirection = 1;
         this.setInitialPosition();
-        this.move();
+        // this.move();
     }
 
     setInitialPosition() {
@@ -64,4 +64,4 @@ export default class Ball {
         this.setPosition(newPosition);
         requestAnimationFrame(this.move.bind(this));
     }
-};
+}
